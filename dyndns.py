@@ -56,7 +56,6 @@ def updateip(apikey, domain_name, subdomain, port, domain_type):
     if FLAG == True:
         a = linode.domain_resource_create(Port=port, DomainID=did,
                 Type=domain_type, Name=subdomain, Target=ip)
-        print a
 
 def main():
     desc = "This script is a Dynamic DNS updater for Linode."
