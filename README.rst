@@ -7,10 +7,10 @@ subdomain in your Domain Manager on your Linode account with the current IP
 address. This script was designed to be executed from a cronjob. It can also
 be executed on it's own and it will update the appropriate settings.
 
-Package requires
+Package requires:
 
-python >= 2.6
 python-pycurl
+python >= 2.6
 
 
 Run
