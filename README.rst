@@ -9,8 +9,8 @@ be executed on it's own and it will update the appropriate settings.
 
 Package requires:
 
-python-pycurl
-python >= 2.6
+- python-pycurl
+- python >= 2.6
 
 
 Run
