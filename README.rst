@@ -11,6 +11,7 @@ Package requires:
 
 - python-pycurl
 - python >= 2.6
+- argparse (``pip install argparse`` if python < 2.7)
 
 
 Run
