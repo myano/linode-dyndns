@@ -49,8 +49,8 @@ def updateip(apikey, domain_name, subdomain, port, domain_type):
 
     for each in linode.domain_resource_list(DomainID=did):
         if each["NAME"] == subdomain:
-        	FLAG = False
-        	resource_id = each["RESOURCEID"]
+            FLAG = False
+            resource_id = each["RESOURCEID"]
 
     ## grab IP address
     ip = getip()
