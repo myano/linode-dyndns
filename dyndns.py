@@ -49,13 +49,18 @@ def updateip(apikey, domain_name, subdomain, port, domain_type):
 
     for each in linode.domain_resource_list(DomainID=did):
         if each["NAME"] == subdomain:
-            FLAG = False
+        	FLAG = False
+        	resource_id = each["RESOURCEID"]
 
     ## grab IP address
     ip = getip()
     if FLAG == True:
         a = linode.domain_resource_create(Port=port, DomainID=did,
                 Type=domain_type, Name=subdomain, Target=ip)
+    else:
+        a = linode.domain_resource_update(Port=port, DomainID=did,
+                ResourceID=resource_id, Target=ip)
+        
 
 def main():
     desc = "This script is a Dynamic DNS updater for Linode."
